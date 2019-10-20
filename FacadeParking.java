@@ -1,22 +1,20 @@
 public class FacadeParking {
 
-	private ParkingLot carParking;
-	private ParkingLot motorcycleParking;
+	private ParkingLot lot;
+	
 	
 	public FacadeParking() {
-		carParking = new CarParking();
-		motorcycleParking = new MotercycleOpen();
+		lot = new lot();
+		
 	}
 	
 	public void LotParkingOn() {
-		System.out.println("Lot parking open");
-		carParking.on();
-		motorcycleParking.on();
+		lot.on();
+		
 	}
 	
 	public void LotParkingOff() {
-		System.out.println("Lot parking closed");
-		carParking.off();
-		motorcycleParking.off();
+		lot.off();
+		
 	}
 }
