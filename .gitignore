@@ -7,3 +7,5 @@
 /ParkingLot.class
 /lot.class
 /simulator.class
+/CarInterface.class
+/MotorcycleInterface.class
