@@ -9,3 +9,7 @@
 /simulator.class
 /CarInterface.class
 /MotorcycleInterface.class
+/ParkingSpotInterface.class
+/ParkingSpotDecorator.class
+/HandicapSpotDecorator.class
+/MotorcycleSpot.class

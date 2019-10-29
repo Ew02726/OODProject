@@ -7,7 +7,8 @@ public class MotorcycleAdapter implements CarInterface {
 	}
 	@Override
 	public String type() {
-		return mi.type();
+		mi.type();
+		return null;
 	}
 
 }

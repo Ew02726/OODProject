@@ -1,10 +1,10 @@
 
-public class ParkingSpot implements Command, ParkingSpotInterface{
+public class MotorcycleSpot implements Command, ParkingSpotInterface{
 	boolean isOpen = true;
-	public boolean handicap = false;
+	public boolean handicap = true;
 	String type;
 	
-	public ParkingSpot(String type) {
+	public MotorcycleSpot(String type) {
 		this.type = type;
 	}
 	
