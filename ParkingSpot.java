@@ -1,31 +1,49 @@
+import java.util.ArrayList;
+import java.util.Observable;
 
-public class ParkingSpot implements Command, ParkingSpotInterface{
+public class ParkingSpot extends Observable{
 	boolean isOpen = true;
-	public boolean handicap = false;
+	ArrayList<ParkingSpotTag> ParkingSpotTags = new ArrayList<ParkingSpotTag>();
 	String type;
+	Vehicle containedVehicle;
+	int spotNum;
 	
-	public ParkingSpot(String type) {
+	public ParkingSpot(String type, int x) {
 		this.type = type;
+		this.spotNum = x;
 	}
-	
-	//implement on function from Command interface to show parking spot is open.
-	public void on() {
+
+	public void clearSpot() {
 		this.isOpen = true;
+		this.containedVehicle = null;
 	}
 	
-	//implement off function from Command interface to show parking spot is closed.
 	public void off() {
 		this.isOpen = false;
 	}
 	
-	@Override
-	public String type() {
+	public String getType() {
 		return this.type;
 	}
-
-	@Override
-	public void isHandicapSpot(boolean isHandicap) {
-		handicap = isHandicap;
+	
+	public ArrayList<ParkingSpotTag> getTags() {
+		return ParkingSpotTags;
 	}
 	
+	public void addTag(ParkingSpotTag newTag) {
+		this.ParkingSpotTags.add(newTag);
+	}
+	
+	public void removeTag(ParkingSpotTag remTag) {
+		this.ParkingSpotTags.remove(remTag);
+	}
+	
+	//code for observer/observable
+	public void clearChanged() {
+		super.clearChanged();
+	}
+	
+	public void setChanged() {
+		super.setChanged();
+	}
 }

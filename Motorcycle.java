@@ -1,30 +1,45 @@
 
-public class Motorcycle implements Command,MotorcycleInterface{
-	boolean isShown = false;
-	String type  = "Motorcycle";
-	boolean handicap = true;
+public class Motorcycle implements Vehicle{
+	String type = "Motorcycle";
+	String Make;
+	String Model;
+	String plateNum;
 	
-	//implement on function from Command interface.
-	public void on() {
-		this.isShown = true;	
-	}
-	
-	//implement off function from Command interface.
-	public void off() {
-		this.isShown = false;
-	}
-
-	@Override
-	public String type() {
-		return this.type;
-	}
-
-	public boolean isHandicap() {
-		return handicap;
-	}
-
-	public void setHandicap(boolean handicap) {
-		this.handicap = handicap;
+	public Motorcycle(String Make, String Model, String plateNum) {
+		this.Make = Make;
+		this.Model = Model;
+		this.plateNum = plateNum;
 	}
 	
+	public void setMake(String make) {
+		this.Make = make;
+	}
+	
+	public void setModel(String model) {
+		this.Model = model;
+	}
+	
+	public void setPlateNum(String platenum) {
+		this.plateNum = platenum;
+	}
+	
+	public String getType() {
+		return type;
+	}
+	
+	public String getMake() {
+		return Make;
+	}
+	
+	public String getModel() {
+		return Model;
+	}
+	
+	public String getPlateNum() {
+		return plateNum;
+	}
+	
+	public void setType(String type) {
+		this.type = type;
+	}
 }
