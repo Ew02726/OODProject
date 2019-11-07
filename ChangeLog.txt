@@ -1,13 +1,15 @@
 Changelog:==============================================================================================
 
-- Command pattern became obsolete and thus was removed. Will have to remake at a later date.
-- Adapter pattern also became obsolete and thus was removed. Will have to remake at a later date.
+- Command pattern was remade to assist in assigning and displaying car spot tags
+- Adapter pattern was improved to work better with new program
 
-- Removed many obsolete classes including: MotorcycleSpot, Motorcycle/Car interface, Adapters, etc.
+- Removed many obsolete classes including: MotorcycleSpot, Motorcycle interface, Adapters, etc.
 
 - Added vehicle interface that car and motorcycle implement.
 - Restructured program so that car/motorcycle objects are stored in parking spots.
 - Remade decorator pattern to add proximity and constraint tags to parking spots.
+
+- New window called Tag Adder was made to add tags to parking spots
 
 Notes:==================================================================================================
 
