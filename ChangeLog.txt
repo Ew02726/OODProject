@@ -1,0 +1,41 @@
+Changelog:==============================================================================================
+
+- Command pattern became obsolete and thus was removed. Will have to remake at a later date.
+- Adapter pattern also became obsolete and thus was removed. Will have to remake at a later date.
+
+- Removed many obsolete classes including: MotorcycleSpot, Motorcycle/Car interface, Adapters, etc.
+
+- Added vehicle interface that car and motorcycle implement.
+- Restructured program so that car/motorcycle objects are stored in parking spots.
+- Remade decorator pattern to add proximity and constraint tags to parking spots.
+
+Notes:==================================================================================================
+
+- All classes that start with "TAG_" are decorations for parking spots used by the decorator pattern
+- Used enumeration for tag types
+
+How the Controller + GUI works:=========================================================================
+
+All of the buttons in the GUI are car spots. Green buttons are open spots while red buttons are occupied
+spots. You can use the controller window to fill parking spots with vehicles and the buttons on the GUI
+will change color in real time. For demo purposes, 100 car spots and 20 motorcycle spots were hard coded
+into the program. You can distinguish them in the GUI by looking at the button names since all car spots
+are named "cSpot" while all motorcycle spots are named "mSpot". The only acceptable vehicle types at the
+moment are "Car" and "Motorcycle". They are case sensitive.
+
+Click the "set open" button to clear out the parking spot you specified in the "Lot Number" text area.
+
+Click the "set closed" button to fill the spot you specified in the "Lot Number" text area with the
+information you placed in the other text areas. Keep in mind you will get an error (which is displayed
+at the bottom of the controller window) if you try to place a Car in a motorcycle spot or if your vehicle
+type is anything other than "Car" or "Motorcycle".
+
+Click the "edit vehicle" button to edit the Make, Model, and License plate number of the vehicle. You can
+NOT change the type of vehicle that is in this spot. The edit button will ignore anything typed in the
+"Vehicle Type" text area. When pressed, the "edit button" will overwrite the information of the vehicle
+in the spot you specified with the information in the other text areas.
+
+In the parking lot GUI, click on any of the buttons to display the type, make, model, and license plate number
+of the vehicle that is contained in that spot. This obviously means that you won't get anything from
+clicking on green buttons since those are empty spots. Only red buttons should write values to the text
+boxes on the right of the parking lot GUI.

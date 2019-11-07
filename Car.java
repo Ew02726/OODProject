@@ -1,30 +1,46 @@
 
-public class Car implements Command,CarInterface {
-	boolean isShown = false;
-	String type = "car";
-	boolean handicap = true;
+public class Car implements Vehicle {
+	String type = "Car";
+	String Make;
+	String Model;
+	String plateNum;
 	
-	//implement on function from Command interface.
-	public void on() {
-		this.isShown = true;
+	public Car(String Make, String Model, String plateNum) {
+		this.Make = Make;
+		this.Model = Model;
+		this.plateNum = plateNum;
 	}
 	
-	//implement off function from Command interface.
-	public void off() {
-		this.isShown = false;
-	}
-
-	@Override
-	public String type() {
+	public String getType() {
 		return this.type;
 	}
-
-	public boolean isHandicap() {
-		return handicap;
+	
+	public void setMake(String make) {
+		this.Make = make;
+	}
+	
+	public void setModel(String model) {
+		this.Model = model;
+	}
+	
+	public void setPlateNum(String platenum) {
+		this.plateNum = platenum;
+	}
+	
+	public String getMake() {
+		return Make;
+	}
+	
+	public String getModel() {
+		return Model;
+	}
+	
+	public String getPlateNum() {
+		return plateNum;
 	}
 
-	public void setHandicap(boolean handicap) {
-		this.handicap = handicap;
+	public void setType(String type) {
+		this.type = type;
 	}
 	
 }
